@@ -1,10 +1,11 @@
 apiVersion: v1
-kind: Pod
+kind: pod 
 metadata:
-   name: hello-pod
-spec:
+  name: hello-pod
+
+spec: 
   containers:
-  - name: first-container
-    image: nginx
-    ports:
-    - containerPort: 80
+  - name: frist-container
+    image: nginx 
+    port:
+    - containerport: 80
