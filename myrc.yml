@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: replication controller 
+metadata: 
+  name: myjavaapp-rc
+spec:
+  replicas: 2
+  selector: 
+    app: myjavaapp-rc
+    version: 2.6.1
+  template:
+    metadata: 
+      labels:
+       app: myjavaapp-rc
+       version: 2.6.1 
+
+    spec: 
+      containers:
+      - name: myjavaapp-container
+        image: maha4iac/myjavaaplication:1
+        ports: 
+        - containerport: 8080
